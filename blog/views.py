@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Musicians, Album, Band
 
 def musician_list(request):
-    return render(request, 'blog/musician_list.html', {})
+    musician=Musicians.objects.all()
+    return render(request, 'blog/musician_list.html', {'musician':musician})

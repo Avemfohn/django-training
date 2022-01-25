@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</body>
-</html>
+{%for musicians in musician%}
+    <article>
+        <h2><a href="">{{musicians.name}}</a></h2>
+        <p>{{musicians.SSN|linebreaksbr}}</p>
+    </article>
+{% endfor %}   
